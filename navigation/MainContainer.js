@@ -5,12 +5,16 @@ import HomeScreen from './screens/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import Icon from '@expo/vector-icons/Ionicons';
 
+
+
 const homeName = "Home";
 const settingsName = "Favorite";
 
 const Tab = createBottomTabNavigator();
 
+
 function MainContainer() {
+
     return (
       <NavigationContainer>
         <Tab.Navigator
@@ -37,8 +41,12 @@ function MainContainer() {
   
           <Tab.Screen name={homeName} component={HomeScreen} />
           <Tab.Screen name={settingsName} component={SettingsScreen} />
+          
+
   
         </Tab.Navigator>
+
+
       </NavigationContainer>
     );
   }

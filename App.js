@@ -1,6 +1,7 @@
 import * as React from 'react';
-import MainContainer from './navigation/MainContainer';
-import DrawerNavigator from './navigation/DrawerNavigator';
+import MainContainer from './app/MainContainer';
+
+
 
 
 
@@ -11,10 +12,11 @@ function App() {
 
 
   return (
-    <MainContainer>
-    
-        {/* <DrawerNavigator /> */}
-    </MainContainer>
+  
+    <MainContainer />
+     
+ 
+       
   );
 }
 

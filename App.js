@@ -1,23 +1,14 @@
-import * as React from 'react';
-import MainContainer from './app/MainContainer';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import MainContainer from './app/MainContainer'; 
 
-
-
-
-
-
-
-
-function App() {
-
-
+const App = () => {
   return (
-  
-    <MainContainer />
-     
- 
-       
+    <Provider store={store}>
+      <MainContainer />
+    </Provider>
   );
-}
+};
 
-export default App;
+export default App

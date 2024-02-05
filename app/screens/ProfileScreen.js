@@ -2,8 +2,11 @@ import React from 'react';
 import { View, Text, ScrollView, StyleSheet, Image, Pressable } from 'react-native';
 
 
+
+
 const ProfileScreen = ({ route, navigation }) => {
   const { portfolio } = route.params;
+
 
   return (
     <ScrollView>

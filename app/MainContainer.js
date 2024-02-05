@@ -3,12 +3,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SettingsScreen from './screens/SettingsScreen';
 import Icon from '@expo/vector-icons/Ionicons';
-import DrawerNavigator from './DrawerNavigator';
+import StackNavigation from './StackNavigation';
 
 
 
 const homeName = "Home";
 const settingsName = "Favorite";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -39,14 +40,14 @@ function MainContainer() {
             tabBarStyle: { padding: 10, height: 70 }
           })}>
   
-          <Tab.Screen name={homeName} component={DrawerNavigator} options={{headerShown: false}} />
+          <Tab.Screen name={homeName} component={StackNavigation} options={{headerShown:false}}  />
           <Tab.Screen name={settingsName} component={SettingsScreen} />
+      
+
           
 
   
         </Tab.Navigator>
-
-
       </NavigationContainer>
     );
   }

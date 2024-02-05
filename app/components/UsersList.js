@@ -8,11 +8,11 @@ const UsersList = () => {
     const navigation = useNavigation();
   
     const handlePress = (item) => {
-      navigation.navigate('ProfileScreen', { portfolio: item });
+        navigation.navigate('profile', { portfolio: item });
     };
   
     const renderItem = ({ item }) => (
-      <UserComponent item={item} onPress={handlePress} /> 
+        <UserComponent item={item} onPress={() => handlePress(item)} /> 
     );
   
     return (
@@ -24,6 +24,6 @@ const UsersList = () => {
         />
       </View>
     );
-  };
-  
+};
+
 export default UsersList;

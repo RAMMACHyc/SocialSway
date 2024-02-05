@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { View, Image, StyleSheet, Text, Pressable } from 'react-native';
+// import { connect } from 'react-redux';
+// import { setSelectedUser } from '../../redux/actions/userActions';
 
 const UserComponent = ({ item, onPress }) => {
+    
     return (
         <Pressable onPress={() => onPress(item.id)}>
             {({ pressed }) => (
@@ -23,6 +26,12 @@ const UserComponent = ({ item, onPress }) => {
         </Pressable>
     );
 };
+
+// const mapDispatchToProps = (dispatch) => ({
+//     onPress: (user) => dispatch(setSelectedUser(user)),
+//   });
+  
+ 
 
 
 const styles = StyleSheet.create({
@@ -58,4 +67,5 @@ const styles = StyleSheet.create({
     },
 });
 
+// export default connect(null, mapDispatchToProps)(UserComponent);
 export default UserComponent;
